@@ -5,6 +5,7 @@ const axios = require('axios');
 require('dotenv').config()
 const app = express()
 const port = 3000
+process.env.NODE_EXTRA_CA_CERTS = './config/sandbox.pem'
 
 var cors = (function(req,res,next){
     if (req.method === "OPTIONS") {
